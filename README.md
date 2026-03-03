@@ -19,4 +19,4 @@ Pure HTML + CSS + JS. No frameworks, no build step, no dependencies.
 
 ## Credits
 
-Inspired by [UG Life Tracker](https://uglife-tracker.netlify.app).
+Inspired by [UG Life Tracker](https://uglife-tracker.netlify.app) and supporting [video](https://youtu.be/3RnuueCaTgU).

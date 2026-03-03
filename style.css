@@ -38,6 +38,53 @@
   --radius: 8px;
 }
 
+/* ========== DARK THEME ========== */
+[data-theme="dark"] {
+  --bg: #1a1a1f;
+  --surface: #24242b;
+  --text: #e8e4df;
+  --text-muted: #9a948c;
+  --text-light: #6b655d;
+  --border: #35353d;
+  --border-dark: #45454f;
+  --accent: #e8e4df;
+
+  --week-teaching: #2e2e36;
+  --week-break: #252535;
+  --week-current: #e8e4df;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .week-square {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .week-square.break {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .modal-overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .setup-field input,
+[data-theme="dark"] .setup-field select,
+[data-theme="dark"] .advanced-semesters input {
+  color-scheme: dark;
+}
+
+@keyframes pulse-current-dark {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 228, 223, 0.3); }
+  50% { box-shadow: 0 0 0 4px rgba(232, 228, 223, 0.1); }
+}
+
+[data-theme="dark"] .week-square.current {
+  animation-name: pulse-current-dark;
+}
+
 body {
   font-family: var(--font-mono);
   background: var(--bg);
@@ -586,6 +633,33 @@ body {
 .footer-note {
   font-size: 0.68rem;
   color: var(--text-light);
+}
+
+/* ========== THEME TOGGLE ========== */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  z-index: 50;
+  line-height: 1;
+}
+
+.theme-toggle:hover {
+  border-color: var(--text-muted);
+  transform: scale(1.1);
 }
 
 /* ========== RESPONSIVE ========== */

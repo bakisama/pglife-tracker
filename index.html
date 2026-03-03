@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PG Life Tracker — IIT Hyderabad</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"></button>
   <div class="container">
     <header class="header">
       <h1 class="title">PG Life <em>Tracker</em></h1>
@@ -105,11 +110,16 @@
       <p class="modal-subtitle" id="modalSubtitle"></p>
       <p class="modal-prompt">How productive and meaningful was this week, in your honest assessment?</p>
       <div class="score-buttons">
-        <button class="score-btn" data-score="1"><span class="score-num">1</span><span class="score-text">Rough</span></button>
-        <button class="score-btn" data-score="2"><span class="score-num">2</span><span class="score-text">Low</span></button>
-        <button class="score-btn" data-score="3"><span class="score-num">3</span><span class="score-text">Okay</span></button>
-        <button class="score-btn" data-score="4"><span class="score-num">4</span><span class="score-text">Good</span></button>
-        <button class="score-btn" data-score="5"><span class="score-num">5</span><span class="score-text">Great</span></button>
+        <button class="score-btn" data-score="1"><span class="score-num">1</span><span
+            class="score-text">Rough</span></button>
+        <button class="score-btn" data-score="2"><span class="score-num">2</span><span
+            class="score-text">Low</span></button>
+        <button class="score-btn" data-score="3"><span class="score-num">3</span><span
+            class="score-text">Okay</span></button>
+        <button class="score-btn" data-score="4"><span class="score-num">4</span><span
+            class="score-text">Good</span></button>
+        <button class="score-btn" data-score="5"><span class="score-num">5</span><span
+            class="score-text">Great</span></button>
       </div>
       <div class="modal-actions">
         <button class="btn-text" id="clearScore" style="display:none;">Clear score</button>
@@ -123,4 +133,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>

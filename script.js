@@ -665,8 +665,29 @@
     }
   });
 
+  // ---- Theme Toggle ----
+  const themeToggle = $('themeToggle');
+
+  function getPreferredTheme() {
+    const saved = localStorage.getItem('pglt-theme');
+    if (saved) return saved;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    themeToggle.textContent = theme === 'dark' ? '\u2600' : '\u263E';
+    localStorage.setItem('pglt-theme', theme);
+  }
+
+  themeToggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme') || 'light';
+    applyTheme(current === 'dark' ? 'light' : 'dark');
+  });
+
   // ---- Init ----
   function init() {
+    applyTheme(getPreferredTheme());
     loadScores();
     loadOverrides();
     const config = loadConfig();
